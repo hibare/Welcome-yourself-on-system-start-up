@@ -41,7 +41,7 @@ sleep 15
 
 #Remove start up file
 echo -n "[*] Removing start up file ... "
-rm ~/.config/autostart/gnome-terminal.desktop
+rm ~/.config/autostart/gnome-terminal.desktop > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Done]${NC}"
 else
@@ -52,7 +52,7 @@ fi
 
 #Remove program
 echo -n "[*] Removing program ... "
-rm -r ~/.crazyScripts/WelcomeScript
+rm -r ~/.crazyScripts/WelcomeScript > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Done]${NC}"
 else

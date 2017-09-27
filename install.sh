@@ -43,7 +43,7 @@ echo "${CYAN}Checking for dependencies${NC}..."
 
 #Check package upower
 echo -n "[*] Checking for package UPower ... "
-which upower >>/dev/null
+which upower > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Present]${NC}"
 else
@@ -52,7 +52,7 @@ fi
 
 #Check package toiler
 echo -n "[*] Checking for package toilet ... "
-which toilet >> /dev/null
+which toilet > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Present]${NC}"
 else
@@ -70,7 +70,7 @@ echo "${CYAN}Creating file structure ... ${NC}"
 
 #Make a directory to hold the script
 echo -n "[*] Creating script directory ... "
-mkdir -p  ~/.crazyScripts/WelcomeScript >> /dev/null
+mkdir -p  ~/.crazyScripts/WelcomeScript > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Done]${NC}"
 else
@@ -80,7 +80,7 @@ fi
 
 #Make autostart directory
 echo -n "[*] Creating autostart directory ... "
-mkdir -p ~/.config/autostart >> /dev/null
+mkdir -p ~/.config/autostart > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Done]${NC}"
 else
@@ -93,7 +93,7 @@ echo "${CYAN}Installing program ... ${NC}"
 
 #Copy script to the location
 echo -n "[*] Installing script ... "
-cp src/main.sh ~/.crazyScripts/WelcomeScript/ >> /dev/null
+cp src/main.sh ~/.crazyScripts/WelcomeScript/ > /dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "${GREEN}[Done]${NC}"
 else
